@@ -8,3 +8,5 @@ nx serve orgcontrol
 
 To see the company presentation type:
 nx serve customer-portal
+
+Make sure to install redux devtools.
