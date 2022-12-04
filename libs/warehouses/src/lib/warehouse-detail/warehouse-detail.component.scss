@@ -1,0 +1,9 @@
+@import './../../../../material/src/lib/breakpoints', './../../../../material/src/lib/mixins';
+.collapse-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 9px 13px;
+    background: none;
+    border: none;
+}

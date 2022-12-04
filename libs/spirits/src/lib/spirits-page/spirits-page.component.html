@@ -1,0 +1,12 @@
+<div class="master-detail-view-wrapper">
+<agave-spirits-spirits-list
+    [spirits]="spirits$ | async"
+    (select)="onSelect($event)"
+    (delete)="onDelete($event)">
+</agave-spirits-spirits-list>
+<agave-spirits-spirit-detail 
+    [spirit]="currentSpirit$ | async"
+    (save)="onSave($event)"
+    (cancel)="onCancel()">
+</agave-spirits-spirit-detail>
+</div>

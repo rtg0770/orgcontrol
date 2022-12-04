@@ -1,0 +1,50 @@
+.cards {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+
+    >:nth-child(odd) {
+        display: grid;
+        padding: 9px 13px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "image info";
+
+        >.info {
+            grid-area: info;
+        }
+
+        >img {
+            grid-area: image;
+        }
+    }
+
+    >:nth-child(even) {
+        display: grid;
+        padding: 9px 13px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "info image";
+
+        >.info {
+            grid-area: info;
+        }
+
+        >img {
+            grid-area: image;
+        }
+
+    }
+}
+
+.card {
+    grid-gap: 24px;
+}
+
+img {
+    grid-area: image;
+    max-width: 100%;
+}
+
+.info {
+    padding: 24px;
+}

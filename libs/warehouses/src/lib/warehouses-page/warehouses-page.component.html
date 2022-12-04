@@ -1,0 +1,13 @@
+<div class="master-detail-view-wrapper">
+  <agave-spirits-warehouses-list
+    [warehouses]="warehouses$ | async"
+    (select)="onSelect($event)"
+    (delete)="onDelete($event)"
+  ></agave-spirits-warehouses-list>
+  <agave-spirits-warehouse-detail
+    [warehouse]="currentWarehouse$ | async"
+    (save)="onSave($event)"
+    (cancel)="onCancel()"
+  >
+  </agave-spirits-warehouse-detail>
+</div>

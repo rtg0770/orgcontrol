@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap');
+@import './../../../../libs/material/src/lib/breakpoints', './../../../../libs/material/src/lib/mixins';
+
+#toggleMenu {
+  position: absolute;
+  padding: 51px;
+  right: 0;
+}
+
+h1 {
+  color: white;
+}
+.website-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #040809;
+  }
+  
+  .website-content {
+    width: 100%;
+    background-color: #040809;
+  }
+  
+  #menu-toggle {
+    position: fixed;
+    z-index: 9999999; /* Ensure that your app's content doesn't overlap the toolbar */
+    display: block;
+    @include respond-to('medium'){
+        display: none;
+    }
+    top: 9px;
+    right: 9px;
+    width: 24px;
+    height: 24px
+  }
+  
+  .side-menu {
+    width: 80vw;
+    background-color: #040809;
+  }
+  
+  .content-main {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    z-index: 9999;
+    padding-right: 13px;
+    padding-left: 13px;
+    min-height: 60vh;
+  }
+
+.content-main  {
+    max-width: 1400px;
+    margin: auto;
+  }
+  .side-links {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    > .side-menu-link {
+      display: block;
+      padding: 13px;
+      text-align: center;
+      margin: 3px;
+      font-family: 'Saira';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+
+  .logo-side-nav {
+    margin-left: 15%;
+    max-width: 50%;
+    margin-bottom: 51px;
+  }

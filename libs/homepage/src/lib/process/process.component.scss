@@ -1,0 +1,49 @@
+@import './../../../../../libs/material/src/lib/breakpoints', './../../../../../libs/material/src/lib/mixins';
+
+.wrapper-content {
+    background-color: #AB8D60;
+    display: grid;
+    >:nth-child(n) {
+        text-align: center;
+    }
+    grid-template-areas:
+    "title"
+    "processes"
+    ;
+    >.svg-title {
+        padding: 24px;
+        align-self: center;
+        grid-area: title;
+        > img {
+            max-width: 90vw;
+        }
+    }
+    >.processes {
+        grid-area: processes;
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 100vw;
+        @include respond-to('medium'){
+            grid-template-columns: 1fr 1fr;
+        }
+        @include respond-to('large'){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        grid-auto-flow: row;
+        >.process {
+            display: flex;
+            flex-flow: column;
+            padding: 24px;
+            > span {
+                display: block;
+                padding: 9px 13px;
+                font-family: 'Saira';
+                font-style: normal;
+                font-size: 19px;
+                line-height: 29px;
+                font-weight: 200;
+            }
+        }
+       
+    }
+}

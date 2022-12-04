@@ -1,0 +1,70 @@
+.tableHeader {
+  display: grid;
+  padding: 13px;
+  margin: 9px;
+  grid-template-areas: "id rowcontent delete";
+  grid-template-columns: 1fr 1fr 51px;
+  > .id {
+    grid-area: id;
+  }
+  > .content {
+    display: flex;
+    flex-flow: row;
+    justify-content:space-evenly;
+    grid-area: rowcontent;
+    >:nth-child(n) {
+      padding: 3px;
+    }
+  }
+  > .deleteItem {
+    grid-area: delete
+  }
+}
+.master-detail-listItem {
+  display: grid;
+  margin: 9px;
+  cursor: pointer;
+  padding: 13px;
+  align-content: center;
+  grid-template-areas: "id rowcontent delete";
+  grid-template-columns: 51px 1fr 51px;
+
+  >:nth-child(n) {
+    align-self: center;
+  }
+
+  >.rowContent {
+    display: flex;
+    flex-flow: row;
+    justify-content:space-evenly;
+    grid-area: rowcontent;
+    > .spiritId {
+      display: none;
+    }
+    >:nth-child(n) {
+      align-self: center;
+    }
+    >img {
+      max-height: 100px;
+      width: auto;
+    }
+    > .spiritName {
+      padding: 3px;
+      font-weight: 600;
+      text-align: left;
+    }
+    > .spiritCategory {
+      padding: 3px;
+      text-align: left;
+    }
+    > .spiritPriceMax {
+      padding: 3px;
+    }
+  }
+
+  >.delete {
+    grid-area: delete;
+    background: none;
+    border: none;
+  }
+}

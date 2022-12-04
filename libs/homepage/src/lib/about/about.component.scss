@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap');
+
+p {
+    color: #fcfcfa
+}
+
+.cites {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    text-align: center;
+    
+    align-items: center;
+    background-image: url('./../../../../../apps/customer-portal/src/assets/photos/mexican-desert.jpg');
+    background-size: cover;
+    >.sentences{
+        margin: auto;
+        text-align: center;
+        max-width: 100vw;
+        >:nth-child(n) {
+            display: block;
+            max-width: 100vw;
+        }
+    }
+}
+.our-misson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+    background-color: #040809;
+    >.wrapper-content{
+        margin: auto;
+        text-align: center;
+        >p{
+            padding: 51px;
+            max-width: 70%;
+            margin: auto;
+            font-family: 'Saira';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 29px;
+        }
+    }
+}

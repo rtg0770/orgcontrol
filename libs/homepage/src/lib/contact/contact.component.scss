@@ -1,0 +1,44 @@
+@import './../../../../../libs/material/src/lib/breakpoints', './../../../../../libs/material/src/lib/mixins';
+
+.wrapper-content {
+    display: grid;
+    grid-template-areas:
+    "title"
+    "cards";
+    grid-gap: 24px;
+
+    >.svg-title {
+        grid-area: title;
+        text-align: center;
+        padding: 24px;
+    }
+
+    >.cards {
+        grid-area: cards;
+        display: grid;
+        grid-gap:24px;
+        padding: 51px;
+        grid-template-columns: repeat(1, 1fr);
+
+        @include respond-to ('medium') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        grid-auto-flow: row;
+
+        >.contact-card {
+            padding: 51px;
+            display: block;
+            color: #2C2E35;
+            background-color: #AB8D60;
+            > strong {
+                color: #2C2E35 !important;
+            }
+            >:nth-child(n){
+                display: block;
+                width: 100%;
+                margin: 9px;
+                
+            }
+        }
+    }
+}

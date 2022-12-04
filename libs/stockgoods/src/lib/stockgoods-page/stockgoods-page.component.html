@@ -1,0 +1,15 @@
+<div class="master-detail-view-wrapper">
+  
+  <agave-spirits-stockgoods-list
+    [stockGoods]="stockgoods$ | async"
+    (select)="onSelect($event)"
+    (delete)="onDelete($event)"
+  ></agave-spirits-stockgoods-list>
+  <agave-spirits-stockgoods-detail
+    [warehouses]="warehouses$ | async"
+    [spirits]="spirits$ | async"
+    [stockgood]="currentStockgood$ | async"
+    (save)="onSave($event)"
+    (cancel)="onCancel()"
+  ></agave-spirits-stockgoods-detail>
+</div>

@@ -1,0 +1,123 @@
+<h1>
+  <span *ngIf="originalSpirit?.id; else prompt"
+    >Editing {{ originalSpirit?.brandName }}</span
+  >
+  <ng-template #prompt>Create Spirit</ng-template>
+</h1>
+
+<form [formGroup]="spiritForm" #f="ngForm" (submit)="onSubmit(f.value)">
+
+  <div class="form-line">
+    <label for="brandName">Brand Name:</label>
+    <input
+      placeholder="brandName"
+      id="brandName"
+      formControlName="brandName"
+      type="text"
+    />
+  </div>
+  <div class="form-line">
+    <label>Category:</label>
+    <select id="category" formControlName="category">
+      <option value="Tequila">Tequila</option>
+      <option value="Raicilla">Raicilla</option>
+      <option value="POX">POX</option>
+      <option value="Mezcal">Mezcal</option>
+      <option value="Mezcal">Mezcal artesanal</option>
+      <option value="Sotol">Sotol</option>
+      <option value="Ron">Ron</option>
+    </select>
+  </div>
+  <div class="form-line">
+    <label for="class">Class:</label>
+    <input placeholder="class" id="class" formControlName="class" type="text" />
+  </div>
+  <div class="form-line">
+    <label for="class">Agave:</label>
+    <input placeholder="agave" id="agave" formControlName="agave" type="text" />
+  </div>
+  <div class="form-line">
+    <label for="class">Alcohol grade:</label>
+    <input
+      placeholder="alcoholGrade"
+      id="alcoholGrade"
+      formControlName="alcoholGrade"
+      type="text"
+    />
+  </div>
+  <div class="form-line">
+    <label for="class">Presentation:</label>
+    <input
+      placeholder="kindOfBottle"
+      id="kindOfBottle"
+      formControlName="kindOfBottle"
+      type="text"
+    />
+  </div>
+  <div class="form-line">
+    <label for="atributes">Atributes:</label>
+    <input
+      placeholder="atributes"
+      id="atributes"
+      formControlName="atributes"
+      type="text"
+    />
+  </div>
+  <div class="form-line">
+    <label for="atributes">Image:</label>
+    <input
+      placeholder="image"
+      id="image"
+      formControlName="image"
+      type="text"
+    />
+  </div>
+  <div class="form-line">
+    <label for="priceOnline">Price Online:</label>
+    <input
+      placeholder="priceOnline"
+      id="priceOnline"
+      formControlName="priceOnline"
+      type="number"
+    />
+  </div>
+
+  <div class="form-line">
+    <label for="priceOnline">Price Horeca:</label>
+    <input
+      placeholder="priceHoreca"
+      id="priceHoreca"
+      formControlName="priceHoreca"
+      type="number"
+    />
+  </div>
+
+  <div class="form-line">
+    <label for="priceOnline">Price Distributors:</label>
+    <input
+      placeholder="priceMax"
+      id="priceMax"
+      formControlName="priceMax"
+      type="number"
+    />
+  </div>
+
+ 
+  <div class="actions">
+        
+    <button class="close withIconLeft" type="button" (click)="cancel.emit();">
+      <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      <span class="text">Cancel</span></button>
+      <button class="save withIconLeft" type="submit">
+        <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.76074 21H19.7607C20.2912 21 20.7999 20.7893 21.175 20.4142C21.55 20.0391 21.7607 19.5304 21.7607 19V8L16.7607 3H5.76074C5.23031 3 4.7216 3.21071 4.34653 3.58579C3.97146 3.96086 3.76074 4.46957 3.76074 5V19C3.76074 19.5304 3.97146 20.0391 4.34653 20.4142C4.7216 20.7893 5.23031 21 5.76074 21Z" stroke="#F1F4F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.7607 21V13H7.76074V21" stroke="#F1F4F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.76074 3V8H15.7607" stroke="#F1F4F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="text">Save</span>
+      </button>
+  </div>
+</form>

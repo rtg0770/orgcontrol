@@ -1,0 +1,27 @@
+@import './../../../../libs/material/src/lib/breakpoints', './../../../../libs/material/src/lib/mixins';
+.app-wrapper {
+    display: grid;
+    grid-gap: 24px;
+    margin: 24px;
+    grid-template-areas: "sidenav" "content";
+    @include respond-to('medium'){
+        grid-template-areas: "sidenav content content";
+        grid-template-columns: 344px 1fr 1fr;
+    }
+
+    > agave-spirits-header {
+        grid-area: sidenav;
+        >menu {
+            background: #FDFFFD;
+            box-shadow: 3px 3px 9px rgba(51, 51, 51, 0.24);
+            border-radius: 13px;
+        }
+    }
+
+    .app-content {
+        grid-area: content;
+    }
+}
+
+
+  

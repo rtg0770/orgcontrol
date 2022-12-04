@@ -1,0 +1,42 @@
+<mat-drawer-container class="website-container" [hasBackdrop]="false">
+    <mat-drawer class="side-menu" #drawer mode="over">
+        <div id="toggleMenu" (click)="drawer.close()">
+          <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="#AB8D60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6L18 18" stroke="#AB8D60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>            
+        </div>
+
+        <menu class="side-links">
+          <img class="logo-side-nav" src="./../assets/titles/logo.svg" >
+
+          <a class="side-menu-link" href="#about">ABOUT</a>
+          
+          <a class="side-menu-link" href="#mezcal">MEZCAL</a>
+          
+          <a class="side-menu-link" href="#agave">AGAVE</a>
+          
+          <a class="side-menu-link" href="#process">PROCESS</a>
+          
+          <a class="side-menu-link" href="#product">PRODUCTS</a>
+         
+          <!--<a href="#news">NEWS</a>
+          
+          <a href="#mixology">MIXOLOGY</a>-->
+
+          <a class="side-menu-link" href="#contact">CONTACT</a>
+      </menu>
+    </mat-drawer>
+    <mat-drawer-content class="website-content">
+      <div id="menu-toggle" (click)="drawer.toggle()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21" stroke="#AB8D60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6H21" stroke="#AB8D60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 18H21" stroke="#AB8D60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+      </div>
+      <agave-spirits-header></agave-spirits-header>
+      <div class="content-main">
+      <router-outlet></router-outlet></div>
+    </mat-drawer-content>
+  </mat-drawer-container>

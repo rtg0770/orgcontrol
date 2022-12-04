@@ -1,0 +1,18 @@
+@import './../../../../material/src/lib/mixins', './../../../../material/src/lib/breakpoints';
+.master-detail-view-wrapper {
+    display: grid;
+    grid-gap: 51px;
+    grid-template-areas: "master" "detail";
+    grid-template-columns: 1fr;
+    padding: 9px;
+    @include respond-to('medium') {
+        grid-template-areas: "master detail";
+        grid-template-columns: 1fr 1fr;
+    }
+    > agave-spirits-warehouses-list {
+        grid-area: master;
+    }
+    > agave-spirits-warehouse-detail {
+        grid-area: detail;
+    }
+}

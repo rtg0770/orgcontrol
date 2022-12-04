@@ -1,0 +1,30 @@
+.tableHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  >:nth-child(n){
+    padding: 13px;
+    margin-bottom: 9px;
+  }
+}
+
+.master-list {
+  >:nth-child(n){
+    padding: 13px;
+    margin-bottom: 9px;
+  }
+}
+
+.master-detail-listItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.delete {
+  background: none;
+  border: none;
+}

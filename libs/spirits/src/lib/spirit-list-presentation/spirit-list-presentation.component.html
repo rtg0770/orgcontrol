@@ -1,0 +1,18 @@
+<div class="cards">
+  <div
+    class="card"
+    *ngFor="let spirit of spirits"
+    (click)="select.emit(spirit)"
+  >
+    <div class="information">
+      {{ spirit.brandName }}
+      {{ spirit.category }}
+      {{ spirit.agave }}
+    </div>
+
+    <img
+      src="./assets/photos/{{ spirit.image }}.jpg"
+      alt="{{ spirit.image }}.jpg"
+    />
+  </div>
+</div>

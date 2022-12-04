@@ -1,0 +1,189 @@
+<h1>
+  <span *ngIf="originalWarehouse?.id; else prompt">
+    Editing {{ originalWarehouse?.location }}
+  </span>
+  <ng-template #prompt>Create Warehouse</ng-template>
+</h1>
+
+<form
+  [formGroup]="warehouseContactForm"
+  #f="ngForm"
+  (submit)="onSubmit(f.value)"
+>
+  <div class="form-line">
+    <label for="name">Warehouse location:</label>
+    <input
+      placeholder="warehouse location"
+      id="location"
+      formControlName="location"
+      type="text"
+    />
+  </div>
+
+  <button
+    type="button"
+    *ngIf="originalWarehouse?.id"
+    (click)="clickToToggle()"
+    class="collapse-menu form-line"
+  >
+    CONTACT INFORMATION
+    <svg
+      *ngIf="!contactInfoToggled"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 9L12 15L18 9"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <svg
+      *ngIf="contactInfoToggled"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 15L12 9L6 15"
+        stroke="#171926"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+
+  <fieldset *ngIf="!originalWarehouse?.id">
+    <div class="form-line">
+      <label for="name">Telephone:</label>
+      <input
+        placeholder="telephone location"
+        id="telephone"
+        formControlName="telephone"
+        type="text"
+      />
+    </div>
+
+    <div class="form-line">
+      <label for="name">Email:</label>
+      <input
+        placeholder="email location"
+        id="email"
+        formControlName="email"
+        type="text"
+      />
+    </div>
+
+    <div class="form-line">
+      <label for="name">Contact name:</label>
+      <input
+        placeholder="contact name"
+        id="contactName"
+        formControlName="contactName"
+        type="text"
+      />
+    </div>
+  </fieldset>
+
+  <fieldset *ngIf="contactInfoToggled" class="collapsable-part">
+    <div class="form-line">
+      <label for="name">Telephone:</label>
+      <input
+        placeholder="telephone location"
+        id="telephone"
+        formControlName="telephone"
+        type="text"
+      />
+    </div>
+
+    <div class="form-line">
+      <label for="name">Email:</label>
+      <input
+        placeholder="email location"
+        id="email"
+        formControlName="email"
+        type="text"
+      />
+    </div>
+
+    <div class="form-line">
+      <label for="name">Contact name:</label>
+      <input
+        placeholder="contact name"
+        id="contactName"
+        formControlName="contactName"
+        type="text"
+      />
+    </div>
+  </fieldset>
+
+  <div class="actions">
+    <button class="close withIconLeft" type="button" (click)="cancel.emit()">
+      <svg
+        class="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18 6L6 18"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M6 6L18 18"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span class="text">Cancel</span>
+    </button>
+    <button class="save withIconLeft" type="submit">
+      <svg
+        class="icon"
+        width="25"
+        height="24"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.76074 21H19.7607C20.2912 21 20.7999 20.7893 21.175 20.4142C21.55 20.0391 21.7607 19.5304 21.7607 19V8L16.7607 3H5.76074C5.23031 3 4.7216 3.21071 4.34653 3.58579C3.97146 3.96086 3.76074 4.46957 3.76074 5V19C3.76074 19.5304 3.97146 20.0391 4.34653 20.4142C4.7216 20.7893 5.23031 21 5.76074 21Z"
+          stroke="#F1F4F6"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M17.7607 21V13H7.76074V21"
+          stroke="#F1F4F6"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7.76074 3V8H15.7607"
+          stroke="#F1F4F6"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span class="text">Save</span>
+    </button>
+  </div>
+</form>

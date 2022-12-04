@@ -1,0 +1,27 @@
+@import './../../../../../libs/material/src/lib/breakpoints', './../../../../../libs/material/src/lib/mixins';
+
+.wrapper-content {
+    display: grid;
+    padding: 51px 0 51px 0;
+    grid-template-areas: "info" "image";
+    @include respond-to('medium'){
+        grid-template-areas: "info image";
+    }
+    background-color: #040809;
+    >.wrapper-image {
+        grid-area: image;
+      
+    }
+
+    >.wrapper-info {
+        grid-area: info;
+        padding: 24px 51px 24px 51px;
+        align-self: center;
+    }
+}
+
+.text {
+    >strong {
+        color: #AB8A55;
+    }
+}

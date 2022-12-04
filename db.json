@@ -1,0 +1,63 @@
+{
+  "spirits": [
+    {
+      "id": "cd04f932-4df7-4633-a356-0cb9f37fb79d",
+      "brandName": "Buen Bicho",
+      "category": "Mezcal",
+      "class": "Blanco o Joven",
+      "agave": "Angustifolia",
+      "alcoholGrade": "40,01",
+      "kindOfBottle": "700",
+      "atributes": "Manejo tradicional del Maguey",
+      "image": "buenbicho",
+      "priceOnline": 1150,
+      "priceHoreca": 1050,
+      "priceMax": 1890
+    },
+    {
+      "id": "4ec47e98-cdcf-4e9f-9275-a66fcf9549ba",
+      "brandName": "Craneo",
+      "category": "Mezcal",
+      "class": "Joven",
+      "agave": "MAGUEY ESPADÍN",
+      "alcoholGrade": "45",
+      "kindOfBottle": "750",
+      "atributes": "Manejo tradicional del Maguey",
+      "image": "craneo",
+      "priceOnline": 1500,
+      "priceHoreca": 1200,
+      "priceMax": 1000
+    },
+    {
+      "id": "a18ae611-e497-412d-9bdb-a0e2abb62a5f",
+      "brandName": "Zunte",
+      "category": "Mezcal",
+      "class": null,
+      "agave": null,
+      "alcoholGrade": null,
+      "kindOfBottle": null,
+      "atributes": null,
+      "image": "zunte",
+      "priceOnline": null,
+      "priceHoreca": null,
+      "priceMax": 1500
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "7ad01ee0-9018-4bae-b56c-4aad991a1410",
+      "location": "Mezcaleria",
+      "telephone": "+420737814573",
+      "email": "david@mezcaleria.cz",
+      "contactName": "David Helebrant"
+    },
+    {
+      "id": "0eca080c-fc8d-439c-bdec-46166d2f9695",
+      "location": "Antverpy",
+      "telephone": "+420737814573",
+      "email": "david@mezcaleria.cz",
+      "contactName": "David Helebrant"
+    }
+  ],
+  "stockgoods": []
+}

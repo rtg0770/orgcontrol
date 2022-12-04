@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap');
+@import './../../../../../libs/material/src/lib/breakpoints', './../../../../../libs/material/src/lib/mixins';
+
+.header-wrapper {
+    display: grid;
+    grid-template-areas: "logo menu";
+    padding: 24px;
+    background-color: #040809;
+    max-width: 1400px;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    
+    >.logo {
+        grid-area: logo;
+    }
+    >menu {
+        grid-area: menu;
+        display: none;
+        @include respond-to('medium'){
+            display: flex;
+        }
+        
+        justify-content: space-evenly;
+        >:nth-child(n) {
+            text-decoration: none;
+            align-content: center;
+            padding: 3px 1px;
+            font-family: 'Saira';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

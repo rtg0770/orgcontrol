@@ -1,0 +1,50 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@agave-spirits/account/actions": ["libs/account/actions/src/index.ts"],
+      "@agave-spirits/accounts": ["libs/accounts/src/index.ts"],
+      "@agave-spirits/accounts/actions": ["libs/accounts/actions/src/index.ts"],
+      "@agave-spirits/auth": ["libs/auth/src/index.ts"],
+      "@agave-spirits/auth/actions": ["libs/auth/actions/src/index.ts"],
+      "@agave-spirits/data": ["libs/data/src/index.ts"],
+      "@agave-spirits/homepage": ["libs/homepage/src/index.ts"],
+      "@agave-spirits/material": ["libs/material/src/index.ts"],
+      "@agave-spirits/shared-models": ["libs/shared-models/src/index.ts"],
+      "@agave-spirits/shared-services": ["libs/shared-services/src/index.ts"],
+      "@agave-spirits/shared-state-spirits": [
+        "libs/shared-state-spirits/src/index.ts"
+      ],
+      "@agave-spirits/shared-state-stockgoods": [
+        "libs/shared-state-stockgoods/src/index.ts"
+      ],
+      "@agave-spirits/shared-state-warehouses": [
+        "libs/shared-state-warehouses/src/index.ts"
+      ],
+      "@agave-spirits/spirits": ["libs/spirits/src/index.ts"],
+      "@agave-spirits/spirits/actions": ["libs/spirits/actions/src/index.ts"],
+      "@agave-spirits/stockgoods": ["libs/stockgoods/src/index.ts"],
+      "@agave-spirits/stockgoods/actions": [
+        "libs/stockgoods/actions/src/index.ts"
+      ],
+      "@agave-spirits/warehouses": ["libs/warehouses/src/index.ts"],
+      "@agave-spirits/warehouses/actions": [
+        "libs/warehouses/actions/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
