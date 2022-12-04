@@ -1,6 +1,6 @@
-# agave-spirits
+# agave spirits s.r.o.
 
-nest(API) not ready > use:
+For database type:
 json-server --watch db.json
 
 For application for Organization control type:
