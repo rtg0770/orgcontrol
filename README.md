@@ -1,4 +1,4 @@
-# agave spirits s.r.o.
+# demo - agave spirits
 
 For database type:
 json-server --watch db.json
